@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "IPRisk - Residential Proxy, VPN & Tor Exit Node Detection API",
+    "description": "Real-time fraud scoring for visitor IP addresses detecting datacenters, commercial VPNs, and Tor exit relays.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://vance-systems.github.io",
+      "description": "Vance Systems Production Gateway"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "responses": {
+          "200": {
+            "description": "Service Operational"
+          }
+        }
+      }
+    },
+    "/v1/ip/risk": {
+      "get": {
+        "summary": "Analyze IP address for proxy, VPN, and fraud risk",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/v1/ip/batch": {
+      "post": {
+        "summary": "Batch assess fraud risk for multiple IP addresses",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    }
+  }
+}
